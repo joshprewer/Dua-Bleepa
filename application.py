@@ -6,10 +6,12 @@ def main():
     st.title("Dua Bleepa")
 
     sess = gpt2.start_tf_sess()
-    if st.button('Write me a song Dua'):
-        data_load_state = st.text('Loading model...')
-        gpt2.load_gpt2(sess, run_name='run1')
 
+    data_load_state = st.text('Loading model...')
+    gpt2.load_gpt2(sess, run_name='run1')
+    data_load_state.text('')
+
+    if st.button('Write me a song Dua'):
         data_load_state.text('Generating a song...')
         text = gpt2.generate(sess,
                             prefix='<|startoftext|>',
