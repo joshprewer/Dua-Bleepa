@@ -12,7 +12,7 @@ def main():
     data_load_state.text('')
 
     if st.button('Write me a song Dua'):
-        data_load_state.text('Generating a song...')
+        data_load_state.text('Generating a song (this may take me a while tehe)...')
         text = gpt2.generate(sess,
                             prefix='<|startoftext|>',
                             truncate='<|endoftext|>',
